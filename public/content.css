@@ -1,0 +1,124 @@
+#ai-translate-extension-btn {
+  position: absolute;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px) scale(0.95);
+}
+
+#ai-translate-extension-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+#ai-translate-extension-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+#ai-translate-extension-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #3b82f6; /* blue-500 */
+}
+
+/* Tooltip/Popup */
+#ai-translate-extension-popup {
+  position: absolute;
+  z-index: 2147483647;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  width: 300px;
+  padding: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px) scale(0.95);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#ai-translate-extension-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+#ai-translate-extension-popup .header {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+#ai-translate-extension-popup .content {
+  font-size: 14px;
+  color: #1f2937;
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+#ai-translate-extension-popup .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 8px;
+}
+
+#ai-translate-extension-popup button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s;
+}
+
+#ai-translate-extension-popup .btn-cancel {
+  background: transparent;
+  color: #4b5563;
+}
+
+#ai-translate-extension-popup .btn-cancel:hover {
+  background: #f3f4f6;
+}
+
+#ai-translate-extension-popup .btn-apply {
+  background: #2563eb;
+  color: white;
+}
+
+#ai-translate-extension-popup .btn-apply:hover {
+  background: #1d4ed8;
+}
+
+#ai-translate-extension-popup .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+#ai-translate-extension-popup .loading svg {
+  animation: spin 1s linear infinite;
+  color: #3b82f6;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }

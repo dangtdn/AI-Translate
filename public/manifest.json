@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "AI Translate & Write",
+  "version": "1.0",
+  "description": "Dịch và viết tiếng Anh với AI",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "AI Translate"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AI Translate & Write",
+  "description": "Chrome extension for translation, grammar check, and text rewriting with AI",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
